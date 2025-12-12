@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Button from "@/components/Button";
 import { FeatureCard } from "@/components/Card";
 import type { Metadata } from "next";
@@ -142,17 +143,18 @@ export default function AboutPage() {
       <section className="py-20 bg-[var(--muted)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Image Placeholder */}
+            {/* Dr. Kim Image */}
             <div className="relative order-2 lg:order-1">
-              <div className="aspect-[3/4] bg-gradient-to-br from-[var(--navy)] to-[var(--primary-blue)] rounded-3xl overflow-hidden max-w-md mx-auto">
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-8">
-                  <div className="w-32 h-32 mb-6 bg-white/20 rounded-full flex items-center justify-center">
-                    <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold font-[var(--font-heading)]">Dr. Eugene Kim</h3>
-                  <p className="text-white/70">Optometrist</p>
+              <div className="aspect-[3/4] bg-gradient-to-br from-[var(--navy)] to-[var(--primary-blue)] rounded-3xl overflow-hidden max-w-sm mx-auto">
+                <div className="absolute inset-0">
+                  <Image
+                    src="/images/dr-kim.png"
+                    alt="Dr. Eugene Kim"
+                    fill
+                    className="object-cover object-top rounded-3xl"
+                    priority
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
               </div>
               {/* Decorative */}

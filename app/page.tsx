@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Button from "@/components/Button";
 import { ServiceCard, FeatureCard } from "@/components/Card";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
@@ -134,23 +135,21 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Hero Image/Illustration */}
+            {/* Hero Image */}
             <div className="relative hidden lg:block">
               <div className="relative w-full aspect-square max-w-lg mx-auto">
-                {/* Main circle */}
+                {/* Main circle background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary-blue)] to-[var(--navy)] rounded-full opacity-10" />
-                <div className="absolute inset-4 bg-gradient-to-br from-[var(--light-blue)] to-white rounded-full" />
                 
-                {/* Eye illustration */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="relative">
-                    <svg className="w-48 h-48 text-[var(--primary-blue)]" viewBox="0 0 100 100" fill="none">
-                      <ellipse cx="50" cy="50" rx="45" ry="30" stroke="currentColor" strokeWidth="3" />
-                      <circle cx="50" cy="50" r="20" fill="currentColor" opacity="0.2" />
-                      <circle cx="50" cy="50" r="12" fill="currentColor" />
-                      <circle cx="45" cy="45" r="4" fill="white" />
-                    </svg>
-                  </div>
+                {/* Image container */}
+                <div className="absolute inset-4 rounded-full overflow-hidden shadow-2xl">
+                  <Image
+                    src="/images/girl-exam.png"
+                    alt="Patient receiving eye examination"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
 
                 {/* Floating elements */}
@@ -174,20 +173,17 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Image Placeholder */}
+            {/* Dr. Kim Exam Image */}
             <div className="relative">
-              <div className="aspect-[4/3] bg-gradient-to-br from-[var(--light-blue)] to-[var(--primary-blue)]/20 rounded-3xl overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-24 h-24 mx-auto mb-4 bg-white/80 rounded-full flex items-center justify-center">
-                      <svg className="w-12 h-12 text-[var(--primary-blue)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                      </svg>
-                    </div>
-                    <p className="text-[var(--navy)] font-medium">Zone 2 Optometry Office</p>
-                    <p className="text-sm text-[var(--text-gray)]">Anaheim, CA</p>
-                  </div>
-                </div>
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden relative bg-gradient-to-br from-[var(--light-blue)] to-[var(--primary-blue)]/20">
+                <Image
+                  src="/images/dr-kim-exam.png"
+                  alt="Dr. Kim performing an eye exam"
+                  fill
+                  className="object-cover object-center"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
               {/* Accent shape */}
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[var(--primary-blue)] rounded-2xl -z-10 opacity-20" />
