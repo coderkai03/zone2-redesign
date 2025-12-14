@@ -105,12 +105,12 @@ export default function Home() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start opacity-0 animate-fade-in-up animation-delay-300">
                 <Link href="/appointments">
-                  <Button variant="primary" size="lg">
+                  <Button variant="primary" size="lg" className="cursor-pointer">
                     Book an Appointment
                   </Button>
                 </Link>
                 <Link href="/services">
-                  <Button variant="outline" size="lg">
+                  <Button variant="outline" size="lg" className="cursor-pointer">
                     Our Services
                   </Button>
                 </Link>
@@ -202,7 +202,7 @@ export default function Home() {
                 At Zone 2, we are dedicated to your eye health as well as those of your family. We provide a blend of professionalism, style, and innovation. Visit us today and experience the difference in personalized and comprehensive eye care services.
               </p>
               <Link href="/about">
-                <Button variant="outline">
+                <Button variant="outline" className="cursor-pointer">
                   Learn More About Us
                 </Button>
               </Link>
@@ -238,7 +238,7 @@ export default function Home() {
 
           <div className="text-center mt-10">
             <Link href="/services">
-              <Button variant="primary">
+              <Button variant="primary" className="cursor-pointer">
                 View All Services
               </Button>
             </Link>
@@ -269,7 +269,7 @@ export default function Home() {
             {/* Image/Stats Card */}
             <div className="relative">
               <div className="bg-gradient-to-br from-[var(--navy)] to-[var(--primary-blue)] rounded-3xl p-8 lg:p-12 text-white">
-                <h3 className="text-2xl font-bold mb-6 font-[var(--font-heading)]">
+                <h3 className="text-2xl font-bold mb-6 text-white">
                   Meet Dr. Eugene Kim
                 </h3>
                 <p className="text-white/80 mb-6 leading-relaxed">
@@ -279,7 +279,7 @@ export default function Home() {
                   With over 15 years of practice in Riverside, CA, Dr. Kim is excited to return to his roots in Anaheim to take over for Dr. Nakano.
                 </p>
                 <Link href="/about">
-                  <button className="inline-flex items-center gap-2 text-white font-semibold hover:gap-3 transition-all">
+                  <button className="inline-flex items-center gap-2 text-white font-semibold hover:gap-3 transition-all cursor-pointer">
                     Learn More
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -315,27 +315,27 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-[var(--navy)] to-[var(--primary-blue)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 font-[var(--font-heading)]">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to See the Difference?
           </h2>
           <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
             Schedule your comprehensive eye exam today and experience personalized care from our expert team. Your vision is our priority.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/appointments">
+            <Link href="/appointments" className="cursor-pointer">
               <Button
-                variant="primary"
+                variant="outline"
                 size="lg"
-                className="bg-white text-[var(--primary-blue)] hover:bg-[var(--light-blue)]"
+                className="border-white text-white hover:bg-white/10 cursor-pointer"
               >
                 Book Appointment
               </Button>
             </Link>
-            <Link href="/contact">
+            <Link href="/contact" className="cursor-pointer">
               <Button
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white/10"
+                className="border-white text-white hover:bg-white/10 cursor-pointer"
               >
                 Contact Us
               </Button>

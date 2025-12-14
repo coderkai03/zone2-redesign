@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import Button from "./Button";
+import Image from "next/image";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -21,26 +22,14 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-[var(--primary-blue)] rounded-xl flex items-center justify-center">
-              <svg
-                className="w-6 h-6 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                />
-              </svg>
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center overflow-hidden bg-white">
+              <Image
+                width={40}
+                height={40}
+                src="/images/zone2-logo.png"
+                alt="Zone 2 Optometry Logo"
+                className="object-contain w-full h-full"
+              />
             </div>
             <div>
               <span className="text-xl font-bold text-[var(--navy)] font-[var(--font-heading)] group-hover:text-[var(--primary-blue)] transition-colors">
